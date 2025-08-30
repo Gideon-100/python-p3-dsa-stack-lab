@@ -5,7 +5,7 @@ class Stack:
         else:
             self.items = list(items)
 
-        self.limit = limit  # max capacity, None means unlimited
+        self.limit = limit  
 
     def isEmpty(self):
         return len(self.items) == 0
@@ -18,7 +18,7 @@ class Stack:
 
     def push(self, item):
         if self.limit is not None and len(self.items) >= self.limit:
-            return None   # instead of raising OverflowError
+            return None   
         self.items.append(item)
 
     def pop(self):
